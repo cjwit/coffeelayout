@@ -1,1 +1,1 @@
-# coffeelayout
+# Product Layout Example
