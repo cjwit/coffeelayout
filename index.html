@@ -11,15 +11,55 @@
 
 <div class = "container">
 	<div id = "breadcrumb-row" class = "row">
-		<div id = "breadcrumbs" class = "col-md-offset-2">
+		<div id = "breadcrumbs">
 			<a href = "#">Home</a> / <a href = "#">Espresso Machines</a> / <a href = "#">Super Automatic</a> / <span id = "breadcrumb-name"></span>
 		</div>
 	</div>
+
+	<!-- header -->
 	<div class = "row">
-		<div id = "thumbnails" class = "col-md-offset 2 col-md-1"></div>
+		<div id = "thumbnails" class = "col-md-offset-1 col-md-1"></div>
 		<div id = "image" class = "col-md-4"></div>
-		<div id = "header-info" class = "col-md-4"></div>
+		<div id = "header" class = "col-md-4">
+			<div id = "header-info"></div>
+			<div id = "cart" class = "btn-group">
+				<button type = "button" class = "btn btn-default btn-sm">Add to Cart</button>
+				<button type = "button" class = "btn btn-default btn-sm">Wish List</button>
+				<button type = "button" class = "btn btn-default btn-sm">Compare</button>
+				<div class = "btn-group" role = "group">
+					<button type = "button" class = "btn btn-default dropdown-toggle btn-sm" data-toggle = "dropdown" aria-haspopup="true" aria-expanded = "false">
+						Share
+						<span class = "caret"></span>
+					</button>
+					<ul class = "dropdown-menu">
+						<li><a href = "#">Facebook</a></li>
+						<li><a href = "#">Twitter</a></li>
+						<li><a href = "#">Google Plus</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
 	</div>
+
+	<!-- product information -->
+	<div id = "product" class = "row">
+		<div id = "product-menu" class = "col-md-3" role = "navigation">
+			<nav>
+				<ul class = "nav nav-pills nav-stacked">
+					<li role = "presentation" class = "active"><a>Product Overview</a></li>
+					<li role = "presentation"><a>Customer Reviews</a></li>
+					<li role = "presentation"><a>Specifications</a></li>
+					<li role = "presentation"><a>Related Videos</a></li>
+				</ul>
+			</nav>
+		</div>
+		<!-- overview, reviews, specs, video -->
+		<div id = "product-information" class = "col-md-9"></div>
+
+	</div>
+	<div id = 'related'></div>
+	<div id = 'also-bought'></div>
+
 </div>
 
 

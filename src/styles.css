@@ -1,10 +1,14 @@
 body {
   margin-top: 0px;
+  margin-bottom: 20px;
   color: black; }
 
 a {
   font-weight: 700;
   color: #585858; }
+
+h1 {
+  font-size: 2em; }
 
 #breadcrumb-row {
   padding: 10px 0px 10px 0px;
@@ -17,6 +21,14 @@ a {
   font-weight: 700;
   color: gray; }
 
+#thumbnails img {
+  margin-top: 20px;
+  border-right: 2px solid transparent; }
+#thumbnails img:first-child {
+  margin-top: 40px; }
+#thumbnails .currentImage {
+  border-right: 2px solid #a72b2b; }
+
 #name {
   margin-top: 0px; }
 
@@ -25,7 +37,7 @@ a {
 
 #salePrice {
   color: #a72b2b;
-  font-size: 2.5em; }
+  font-size: 2em; }
 
 #regularPrice {
   text-decoration: line-through; }
@@ -34,8 +46,26 @@ a {
   font-size: 0.9em; }
 
 #rating {
+  padding-top: 10px;
   font-size: 0.9em; }
   #rating .glyphicon {
     color: #9a8733; }
+
+#cart {
+  padding-top: 20px; }
+
+#brandLogo {
+  margin-top: 20px; }
+
+#product-menu {
+  margin-top: 100px; }
+
+#product {
+  margin-top: 50px; }
+
+#product-information > p {
+  line-height: 1.8;
+  font-weight: 200;
+  margin-left: 20px; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -6,11 +6,15 @@ $gold: rgb(154, 135, 51)
 
 body
   margin-top: 0px
+  margin-bottom: 20px
   color: $dark
 
 a
   font-weight: 700
   color: $med
+
+h1
+  font-size: 2em
 
 #breadcrumb-row
   padding: 10px 0px 10px 0px
@@ -23,6 +27,18 @@ a
   font-weight: 700
   color: $subtle
 
+#thumbnails
+  img
+    margin-top: 20px
+    border-right: 2px solid transparent
+
+  img:first-child
+    margin-top: 40px
+
+  .currentImage
+    border-right: 2px solid $red
+
+
 #name
   margin-top: 0px
 
@@ -30,10 +46,9 @@ a
   span
     padding: 0px 5px 0px 5px
 
-
 #salePrice
   color: $red
-  font-size: 2.5em
+  font-size: 2em
 
 #regularPrice
   text-decoration: line-through
@@ -42,6 +57,24 @@ a
   font-size: 0.9em
 
 #rating
+  padding-top: 10px
   font-size: 0.9em
   .glyphicon
     color: $gold
+
+#cart
+  padding-top: 20px
+
+#brandLogo
+  margin-top: 20px
+
+#product-menu
+  margin-top: 100px
+
+#product
+  margin-top: 50px
+
+#product-information>p
+  line-height: 1.8
+  font-weight: 200
+  margin-left: 20px
