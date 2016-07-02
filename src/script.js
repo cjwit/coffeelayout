@@ -9,15 +9,17 @@ var buildHeader = function(data) {
 	var name = $("<h1></h1>").attr("id", "name").text(data.name);
 	header.append(name);
 
-	var price = $("<div></div>").attr("id", "price")
+	// create price information
+	var price = $("<div></div>").attr("id", "price");
 	var salePrice = $("<span></span>").attr("id", "salePrice").text("$" + String(data.pricing.sale));
 	var regularPrice = $("<span></span>").attr("id", "regularPrice").text("regular: $" + String(data.pricing.regular));
 	var youSave = $("<span></span>").attr("id", "youSave").text("save $" + String(data.pricing.regular - data.pricing.sale));
 	price.append(salePrice).append(regularPrice).append(youSave);
 	header.append(price);
 
+	// generate rating stars dynamically from score
 	var rating = $("<div></div>").attr("id", "rating");
-	var ratingScore = 3 // Math.ceil(data.rating.average);
+	var ratingScore = Math.ceil(data.rating.average);
 	var numberOfEmptyStars = 5 - ratingScore;
 	var stars = ""
 	for (i = 0; i < ratingScore; i++) {
@@ -28,7 +30,7 @@ var buildHeader = function(data) {
 	}
 
 	rating.html(stars);
-	rating.append(" " + data.rating.reviews + " reviews <a href = '#'>add your own</a>")
+	rating.append(" " + data.rating.reviews + " reviews <a href = '#'>add your own</a>");
 	header.append(rating);
 }
 
@@ -40,6 +42,7 @@ var buildImages = function(imageLinks) {
 		images.push($("<img />").attr("id", "image-" + index).attr("src", url).addClass("img-responsive"));
 	})
 
+	// create thumbnails and mobile thumbnails
 	var thumbs = $("#thumbnails");
 	var mobileThumbs = $("#mobile-thumbs");
 	images.forEach(function(image) {
@@ -58,43 +61,50 @@ var buildImages = function(imageLinks) {
 		main.html($(images[0]).clone());
 		$(this).removeClass('currentImage');
 	})
+}
 
-	// build zoom functionality on featured
+// add brand image to header
+var addBrand = function(url) {
+	$("#header").append("<img id = 'brandLogo' class = 'img-responsive' src = '" + url + "' />");
 }
 
 var buildProductInfo = function(info) {
-	var infoDiv = $("#product-information")
+	var infoDiv = $("#product-information");
+	var productInfo = $("<div></div>").attr("id", "description");
 
-	var productInfo = $("<div></div>").attr("id", "description")
+	// generate product info based on incoming data and structure
 	var sections = Object.keys(info);
 	sections.forEach(function(section) {
-		productInfo.append($("<h2></h2>").addClass('product-info-header').text(section))
-		var p = info[section].split("\n").join("</p><p>")
-		productInfo.append($("<p></p>").html(p))
+		productInfo.append($("<h2></h2>").addClass('product-info-header').text(section));
+		var p = info[section].split("\n").join("</p><p>");
+		productInfo.append($("<p></p>").html(p));
 	});
 
+	// set clicker
 	$("#see-overview").click(function() {
 		$("#product-menu").children().removeClass("active");
 		$(this).addClass("active");
 		infoDiv.html(productInfo);
 	})
 
-	infoDiv.html(productInfo)
+	infoDiv.html(productInfo);
 }
 
 var buildReviews = function(reviews) {
-	var infoDiv = $("#product-information")
+	var infoDiv = $("#product-information");
 
-	var reviewDiv = $("<div></div>").attr("id", "description")
+	// generate reviews from incoming data
+	var reviewDiv = $("<div></div>").attr("id", "description");
 	reviews.forEach(function(review) {
 		var header = review.author.toUpperCase();
 		header += ": " + review.rating;
 		header += " <small>" + new Date(review.date).toLocaleDateString() + "</small>";
-		reviewDiv.append($("<h4></h4>").addClass('product-info-header').html(header))
+		reviewDiv.append($("<h4></h4>").addClass('product-info-header').html(header));
 		var p = review.comments.split("\n").join("</p><p>");
 		reviewDiv.append($("<p></p>").html(p));
 	});
 
+	// set clicker
 	$("#see-reviews").click(function() {
 		$("#product-menu").children().removeClass("active");
 		$(this).addClass("active");
@@ -103,9 +113,11 @@ var buildReviews = function(reviews) {
 }
 
 var buildSpecs = function(spec) {
+	// specs built from copy of current webpage
 	var infoDiv = $("#product-information");
 	var specDiv = $("<div></div>").attr("id", "description").html(spec);
 
+	// set clicker
 	$("#see-specs").click(function() {
 		$("#product-menu").children().removeClass("active");
 		$(this).addClass("active");
@@ -114,9 +126,10 @@ var buildSpecs = function(spec) {
 }
 
 var buildVideos = function() {
-	var infoDiv = $("#product-information")
-	var videoDiv = $("<div></div>").attr("id", "description")
+	var infoDiv = $("#product-information");
+	var videoDiv = $("<div></div>").attr("id", "description");
 
+	// create mock videos and link them to modal displays
 	for (i = 0; i < 10; i++) {
 		var thumb = $("<div></div>").addClass("video-thumb");
 		thumb.append($("<div />").addClass("mock-video")).attr({"data-toggle": "modal", "data-target": "#watch-video"});
@@ -124,10 +137,11 @@ var buildVideos = function() {
 		videoDiv.append(thumb);
 	}
 
-	var modal = $("<div class = 'modal fade' id = 'watch-video' tabindex = '-1' role = 'dialog' aria-labelledby = 'watch-video-label'></div>")
-	modal.append($("<div class = 'modal-dialog' role = 'document'><div class = 'modal-content'><iframe width='560' height='315' src='https://www.youtube.com/embed/PPJVjJDptpY' frameborder='0' allowfullscreen></iframe></div></div>"))
-	videoDiv.append(modal)
+	var modal = $("<div class = 'modal fade' id = 'watch-video' tabindex = '-1' role = 'dialog' aria-labelledby = 'watch-video-label'></div>");
+	modal.append($("<div class = 'modal-dialog' role = 'document'><div class = 'modal-content'><iframe width='560' height='315' src='https://www.youtube.com/embed/PPJVjJDptpY' frameborder='0' allowfullscreen></iframe></div></div>"));
+	videoDiv.append(modal);
 
+	// set clicker
 	$("#see-videos").click(function() {
 		$("#product-menu").children().removeClass("active");
 		$(this).addClass("active");
@@ -139,6 +153,7 @@ var buildRelated = function() {
 	var infoDiv = $("#product-information");
 	var relatedDiv = $("<div></div>").attr("id", "related-items");
 
+	// create mock related items
 	for (i = 0; i < 3; i++) {
 		var itemRow = $("<div />").addClass("row");
 		for (j = 0; j < 3; j++) {
@@ -151,6 +166,7 @@ var buildRelated = function() {
 		relatedDiv.append(itemRow);
 	}
 
+	// set clicker
 	$("#see-related").click(function() {
 		$("#product-menu").children().removeClass("active");
 		$(this).addClass("active");
@@ -158,6 +174,7 @@ var buildRelated = function() {
 	});
 }
 
+// largely identical to previous function, but separate for potential later formatting decisions
 var buildAlsoBought = function() {
 	var infoDiv = $("#product-information");
 	var relatedDiv = $("<div></div>").attr("id", "also-bought-items");
@@ -174,6 +191,7 @@ var buildAlsoBought = function() {
 		relatedDiv.append(itemRow);
 	}
 
+	// set clicker
 	$("#see-also-bought").click(function() {
 		$("#product-menu").children().removeClass("active");
 		$(this).addClass("active");
@@ -181,10 +199,7 @@ var buildAlsoBought = function() {
 	});
 }
 
-var addBrand = function(url) {
-	$("#header").append("<img id = 'brandLogo' class = 'img-responsive' src = '" + url + "' />");
-}
-
+// initialize the DOM manipulation
 var populateData = function(data) {
 	buildHeader(data);
 	buildImages(data.images);
@@ -198,6 +213,7 @@ var populateData = function(data) {
 	buildVideos();
 }
 
+// get the info!
 $.ajax({
 	url: "src/mockAPI.js",
 	dataType: "text",

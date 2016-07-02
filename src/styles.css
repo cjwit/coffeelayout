@@ -1,21 +1,30 @@
-.nav-pills li.active a {
-  background-color: #a72b2b; }
-.nav-pills li.active a:hover {
-  background-color: #a72b2b; }
-.nav-pills li.active a:focus {
-  background-color: #a72b2b; }
-
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,700|Hammersmith+One);
 body {
   margin-top: 0px;
   margin-bottom: 20px;
-  color: #2b2929; }
+  color: #2b2929;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300; }
 
 a {
   font-weight: 700;
   color: #585858; }
 
 h1 {
-  font-size: 2em; }
+  font-size: 2em;
+  font-family: "Hammersmith One", sans-serif; }
+
+h2, h3, h4 {
+  font-family: "Hammersmith One", sans-serif; }
+
+.nav-pills {
+  font-family: "Hammersmith One", sans-serif; }
+  .nav-pills li.active a {
+    background-color: #a72b2b; }
+  .nav-pills li.active a:hover {
+    background-color: #a72b2b; }
+  .nav-pills li.active a:focus {
+    background-color: #a72b2b; }
 
 #breadcrumb-row {
   padding: 10px 0px 10px 0px;
@@ -80,6 +89,9 @@ h1 {
 #product-menu {
   margin-top: 100px;
   margin-bottom: 50px; }
+  @media screen and (max-width: 768px) {
+    #product-menu {
+      margin-top: 0px; } }
 
 #product {
   margin-top: 50px; }
@@ -112,7 +124,8 @@ iframe {
 .item-thumb {
   margin-bottom: 30px; }
   .item-thumb .item-title {
-    font-weight: 700; }
+    font-weight: 700;
+    margin-top: 5px; }
   .item-thumb .item-price {
     color: #a72b2b; }
 

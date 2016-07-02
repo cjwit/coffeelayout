@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,700|Hammersmith+One)
+
 $subtle: rgb(213, 213, 213)
 $dark: rgb(43, 41, 41)
 $med:rgb(88, 88, 88)
@@ -7,19 +9,12 @@ $gold: rgb(154, 135, 51)
 $small: 768px
 $medium: 970px
 
-.nav-pills
-  li.active
-    a
-      background-color: $red
-    a:hover
-      background-color: $red
-    a:focus
-      background-color: $red
-
 body
   margin-top: 0px
   margin-bottom: 20px
   color: $dark
+  font-family: 'Josefin Sans', sans-serif
+  font-weight: 300
 
 a
   font-weight: 700
@@ -27,6 +22,21 @@ a
 
 h1
   font-size: 2em
+  font-family: 'Hammersmith One', sans-serif
+
+h2, h3, h4
+  font-family: 'Hammersmith One', sans-serif
+
+.nav-pills
+  font-family: 'Hammersmith One', sans-serif
+
+  li.active
+    a
+      background-color: $red
+    a:hover
+      background-color: $red
+    a:focus
+      background-color: $red
 
 #breadcrumb-row
   padding: 10px 0px 10px 0px
@@ -96,6 +106,8 @@ h1
 #product-menu
   margin-top: 100px
   margin-bottom: 50px
+  @media screen and (max-width: $small)
+    margin-top: 0px
 
 #product
   margin-top: 50px
@@ -129,6 +141,7 @@ iframe
   margin-bottom: 30px
   .item-title
     font-weight: 700
+    margin-top: 5px
   .item-price
     color: $red
 
