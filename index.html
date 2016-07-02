@@ -18,9 +18,12 @@
 
 	<!-- header -->
 	<div class = "row">
-		<div id = "thumbnails" class = "col-md-offset-1 col-md-1"></div>
-		<div id = "image" class = "col-md-4"></div>
-		<div id = "header" class = "col-md-4">
+		<div id = "thumbnails" class = "col-sm-offset-1 col-sm-1"></div>
+		<div id = "image" class = "col-sm-4">
+			<div id = "image-main"></div>
+			<div id = "mobile-thumbs"></div>
+		</div>
+		<div id = "header" class = "col-sm-4">
 			<div id = "header-info"></div>
 			<div id = "cart" class = "btn-group">
 				<button type = "button" class = "btn btn-default btn-sm">Add to Cart</button>
@@ -43,18 +46,20 @@
 
 	<!-- product information -->
 	<div id = "product" class = "row">
-		<div id = "product-menu" class = "col-md-3" role = "navigation">
+		<div class = "col-sm-3" role = "navigation">
 			<nav>
-				<ul class = "nav nav-pills nav-stacked">
-					<li role = "presentation" class = "active"><a>Product Overview</a></li>
-					<li role = "presentation"><a>Customer Reviews</a></li>
-					<li role = "presentation"><a>Specifications</a></li>
-					<li role = "presentation"><a>Related Videos</a></li>
+				<ul id = "product-menu" class = "nav nav-pills nav-stacked">
+					<li id = "see-overview" role = "presentation" class = "active"><a>Product Overview</a></li>
+					<li id = "see-reviews" role = "presentation"><a>Customer Reviews</a></li>
+					<li id = "see-related" role = "presentation"><a>Related Items</a></li>
+					<li id = "see-also-bought" role = "presentation"><a>Customers Also Bought</a></li>
+					<li id = "see-specs" role = "presentation"><a>Specifications</a></li>
+					<li id = "see-videos" role = "presentation"><a>Related Videos</a></li>
 				</ul>
 			</nav>
 		</div>
 		<!-- overview, reviews, specs, video -->
-		<div id = "product-information" class = "col-md-9"></div>
+		<div id = "product-information" class = "col-sm-9"></div>
 
 	</div>
 	<div id = 'related'></div>

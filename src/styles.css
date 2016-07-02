@@ -1,7 +1,14 @@
+.nav-pills li.active a {
+  background-color: #a72b2b; }
+.nav-pills li.active a:hover {
+  background-color: #a72b2b; }
+.nav-pills li.active a:focus {
+  background-color: #a72b2b; }
+
 body {
   margin-top: 0px;
   margin-bottom: 20px;
-  color: black; }
+  color: #2b2929; }
 
 a {
   font-weight: 700;
@@ -12,22 +19,35 @@ h1 {
 
 #breadcrumb-row {
   padding: 10px 0px 10px 0px;
-  border-bottom: 1px solid gray;
-  color: black; }
+  border-bottom: 1px solid #d5d5d5;
+  color: #2b2929; }
 
 #category {
   margin-top: 20px;
   font-size: 0.8em;
   font-weight: 700;
-  color: gray; }
+  color: #585858; }
 
 #thumbnails img {
   margin-top: 20px;
-  border-right: 2px solid transparent; }
+  border-left: 2px solid transparent; }
+  @media screen and (max-width: 970px) {
+    #thumbnails img {
+      display: none; } }
 #thumbnails img:first-child {
   margin-top: 40px; }
 #thumbnails .currentImage {
-  border-right: 2px solid #a72b2b; }
+  border-left: 2px solid #a72b2b; }
+
+#mobile-thumbs img {
+  display: inline-block;
+  border-bottom: 2px solid transparent;
+  width: 33%; }
+#mobile-thumbs .currentImage {
+  border-bottom: 2px solid #a72b2b; }
+@media screen and (min-width: 970px) {
+  #mobile-thumbs {
+    display: none; } }
 
 #name {
   margin-top: 0px; }
@@ -58,14 +78,47 @@ h1 {
   margin-top: 20px; }
 
 #product-menu {
-  margin-top: 100px; }
+  margin-top: 100px;
+  margin-bottom: 50px; }
 
 #product {
   margin-top: 50px; }
 
-#product-information > p {
+#description > p {
   line-height: 1.8;
   font-weight: 200;
   margin-left: 20px; }
+
+.video-thumb {
+  display: inline-block;
+  width: 30%;
+  margin-top: 40px;
+  font-weight: 700; }
+
+.mock-video {
+  border: 1px solid #2b2929;
+  margin: 10px;
+  height: 120px;
+  background: #d5d5d5; }
+
+.modal-content {
+  height: 355px;
+  width: 600px;
+  padding: 20px; }
+
+iframe {
+  border-radius: 5px; }
+
+.item-thumb {
+  margin-bottom: 30px; }
+  .item-thumb .item-title {
+    font-weight: 700; }
+  .item-thumb .item-price {
+    color: #a72b2b; }
+
+.t-head {
+  background: #585858;
+  color: white;
+  font-weight: 700; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -34,5 +34,49 @@
         "Steaming and Frothing": "This Gaggia super automatic has an automated one­touch Milk Management System that can deliver steamed or frothed milk directly into your cup, depending on the chosen drink. An external milk circuit ensures that milk does not enter the machine and the detachable carafe can be stored in the fridge for your convenience. An automatic cleaning cycle rinses the milk circuit after each use, to ensure that it is free of clogs and contaminants. Should you wish to steam/froth manually, you'll be able to do so, as the Accademia has a steam wand/water dispenser.",
         "Water Management": "The Accademia has a generous 1.7­liter water reservoir; this unit comes with a four­step Mavea Water Filter to prevent scale and mineral build up. Users can control water hardness to ensure great tasting coffee.",
         "Maintenance": "The stainless­steel front panel of the machine opens to reveal the removable brew group and dregs drawer. Both can be easily detached for routine cleaning and maintenance. The Gaggia Accademia has an alert system that will notify you if the dregs drawer or drip tray need to be emptied, or if the bean hopper needs to be refilled. The display screen will also warn you, if the machine needs to be descaled."
-    }
+    },
+    "reviews": [
+        {
+            "author": "Little Bozo",
+            "rating": 5,
+            "date": 1451433600,
+            "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        {
+            "author": "Fake name",
+            "rating": 5,
+            "date": 1390745043,
+            "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        {
+            "author": "Jane Smith",
+            "rating": 5,
+            "date": 1417010643,
+            "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        {
+            "author": "Scotty McGee",
+            "rating": 5,
+            "date": 1417010643,
+            "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        {
+            "author": "Rocker McRock",
+            "rating": 5,
+            "date": 1459519443,
+            "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        {
+            "author": "Louis Louiston",
+            "rating": 5,
+            "date": 1458050643,
+            "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        {
+            "author": "Snugglepuss",
+            "rating": 5,
+            "date": 1459519443,
+            "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        }
+    ]
 }
